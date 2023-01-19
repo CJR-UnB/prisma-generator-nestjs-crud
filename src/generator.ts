@@ -29,16 +29,5 @@ generatorHandler({
 
       await writeFileSafely(writeDirLocation, fileName, tsService)
     })
-
-    options.dmmf.datamodel.enums.forEach(async (enumInfo) => {
-      const tsEnum = genEnum(enumInfo)
-
-      const writeLocation = path.join(
-        options.generator.output?.value!,
-        `${enumInfo.name}.ts`,
-      )
-
-      await writeFileSafely(writeLocation, tsEnum)
-    })
   },
 })
