@@ -1,6 +1,6 @@
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/CJR-UnB/prisma-generator-nestjs-crud/blob/dev/README.pt-br.md)
 
-# @cjr-unb/nestjs-service
+# @cjr-unb/nestjs-crud-generator
 
 > This generator was bootstraped using [create-prisma-generator](https://github.com/YassinEldeeb/create-prisma-generator)
 

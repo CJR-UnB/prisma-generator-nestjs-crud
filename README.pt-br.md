@@ -1,4 +1,4 @@
-# @cjr-unb/nestjs-service
+# @cjr-unb/nestjs-crud-generator
 
 > Este gerador foi inicializado usando [create-prisma-generator](https://github.com/YassinEldeeb/create-prisma-generator)
 
