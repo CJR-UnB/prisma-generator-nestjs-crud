@@ -2,19 +2,19 @@
 
 > Este gerador foi inicializado usando [create-prisma-generator](https://github.com/YassinEldeeb/create-prisma-generator)
 
-Um gerador prisma de serviços para NestJS. 
+Um gerador prisma de CRUD para NestJS. 
 
 # Instalação
 É necessário ter instalado o prisma e executado pelo menos uma migração. Feito isso, instale o pacote:
 ```
-npm i @cjr-unb/nestjs-service
+npm i @cjr-unb/nestjs-crud-generator
 ```
 
 # Como usar
 Adicione o seguinte trecho no inicio do seu arquivo prisma.schema
 ```prisma
 generator service_generator {
-  provider = "prisma-generator-nestjs-service"
+  provider = "prisma-generator-nestjs-crud"
   output   = "../src"
 }
 ```

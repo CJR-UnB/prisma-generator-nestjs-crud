@@ -1,21 +1,21 @@
-[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/CJR-UnB/prisma-generator-nestjs-service/blob/dev/README.pt-br.md)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/CJR-UnB/prisma-generator-nestjs-crud/blob/dev/README.pt-br.md)
 
 # @cjr-unb/nestjs-service
 
 > This generator was bootstraped using [create-prisma-generator](https://github.com/YassinEldeeb/create-prisma-generator)
 
-A service prisma generator for NestJS
+A CRUD prisma generator for NestJS
 
 # Installation
 It is necessary to have Prisma installed and at least one migration executed. After that, install the package:
 ```
-npm i @cjr-unb/nestjs-service
+npm i @cjr-unb/nestjs-crud-generator
 ```
 # How to Use
 Add the following snippet at the beginning of your prisma.schema file:
 ```prisma
 generator service_generator {
-  provider = "prisma-generator-nestjs-service"
+  provider = "prisma-generator-nestjs-crud"
   output   = "../src"
 }
 ```

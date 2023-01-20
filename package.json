@@ -1,11 +1,11 @@
 {
-  "name": "@cjr-unb/nestjs-service",
-  "description": "A service prisma generator for NestJS",
+  "name": "@cjr-unb/nestjs-crud-generator",
+  "description": "A crud prisma generator for NestJS",
   "version": "1.0.0",
   "main": "dist/generator.js",
   "license": "MIT",
   "bin": {
-    "prisma-generator-nestjs-service": "dist/bin.js"
+    "prisma-generator-nestjs-crud": "dist/bin.js"
   },
   "engines": {
     "node": ">=14.0"
@@ -33,10 +33,10 @@
     "ts-jest": "27.1.4",
     "typescript": "4.6.2"
   },
-  "homepage": "Link to homepage or github readme here",
+  "homepage": "https://github.com/CJR-UnB/prisma-generator-nestjs-crud#readme",
   "repository": {
     "type": "git",
-    "url": "Repo link here"
+    "url": "https://github.com/CJR-UnB/prisma-generator-nestjs-crud"
   },
   "author": "Edson Sales",
   "keywords": [
@@ -44,7 +44,7 @@
     "generator",
     "nestjs",
     "nest",
-    "service",
-    "crud"
+    "crud",
+    "service"
   ]
 }
