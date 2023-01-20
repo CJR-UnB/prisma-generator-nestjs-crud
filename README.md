@@ -29,6 +29,6 @@ Run the command
 ```
 npx prisma generate
 ```
-And you're done!
+That's it!
 
 The generated services use the @cjr-unb/super-crud library to implement CRUD. You can find more information [here](https://github.com/CJR-UnB/nestjs-prisma-super-crud#readme).
