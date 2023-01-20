@@ -5,7 +5,7 @@ import { formatFile } from './formatFile'
 export const writeFileSafely = async (dirLocation: string, fileName: string, content: any) => {
   fs.access(dirLocation, async err => {
     if (err)
-      return logger.info(`Directory not found:\n${dirLocation}`)
+      return logger.info(`Directory not found: ${dirLocation}`)
 
     const formattedFile = await formatFile(content)
 
