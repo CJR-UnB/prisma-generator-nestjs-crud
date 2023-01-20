@@ -19,7 +19,7 @@ generator crud_generator {
   output   = "../src"
 }
 ```
-In the provider field, write "prisma-generator-nestjs-service". In output, put the path to the src folder.
+In the provider field, write "prisma-generator-nestjs-crud". In output, put the path to the src folder.
 
 The src directory should contain directories named with your model's name in kebab-case. These will be the locations where the services will be generated.
 
