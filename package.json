@@ -1,7 +1,7 @@
 {
   "name": "@cjr-unb/nestjs-crud-generator",
   "description": "A crud prisma generator for NestJS",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/generator.js",
   "license": "MIT",
   "bin": {
