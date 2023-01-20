@@ -1,24 +1,24 @@
 import { DMMF } from '@prisma/generator-helper'
-import Case from 'case'
+import { changeFirstLetter } from '../utils/changeFirstLetter'
 
 export function genService(model: DMMF.Model): string {
-  const namePascalCase = Case.pascal(model.name)
-  const nameCamelCase = Case.camel(model.name)
+  const nameUppercase  = changeFirstLetter("uppercase", model.name) 
+  const nameLowercase = changeFirstLetter("lowercase", model.name)
 
   return `import { Injectable } from '@nestjs/common';
 import { CrudOptions, RejectOptions } from '@cjr-unb/super-crud';
 import { Prisma } from '@prisma/client';
 import { PrismaService } from 'src/prisma/prisma.service';
 
-type ${namePascalCase}Model = Prisma.${namePascalCase}Delegate<RejectOptions>;
-const {defaultOptions, getCrud} = new CrudOptions<${namePascalCase}Model>().setOptions({});
+type ${nameUppercase}Model = Prisma.${nameUppercase}Delegate<RejectOptions>;
+const {defaultOptions, getCrud} = new CrudOptions<${nameUppercase}Model>().setOptions({});
 
 @Injectable()
-export class ${namePascalCase}Service extends getCrud<
-  Prisma.${namePascalCase}GetPayload<typeof defaultOptions>
+export class ${nameUppercase}Service extends getCrud<
+  Prisma.${nameUppercase}GetPayload<typeof defaultOptions>
 >() {
   constructor(protected readonly prisma: PrismaService) {
-    super(prisma.${nameCamelCase}, defaultOptions);
+    super(prisma.${nameLowercase}, defaultOptions);
   }
 }    
 `
