@@ -11,7 +11,7 @@ npm i @cjr-unb/nestjs-crud-generator
 ```
 
 # Como usar
-Adicione o seguinte trecho no inicio do seu arquivo prisma.schema
+Adicione o seguinte trecho no inicio do seu arquivo schema.prisma
 ```prisma
 generator crud_generator {
   provider = "prisma-generator-nestjs-crud"

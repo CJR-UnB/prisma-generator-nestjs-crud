@@ -12,7 +12,7 @@ It is necessary to have Prisma installed and at least one migration executed. Af
 npm i @cjr-unb/nestjs-crud-generator
 ```
 # How to Use
-Add the following snippet at the beginning of your prisma.schema file:
+Add the following snippet at the beginning of your schema.prisma file:
 ```prisma
 generator crud_generator {
   provider = "prisma-generator-nestjs-crud"
