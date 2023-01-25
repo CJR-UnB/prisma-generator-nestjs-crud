@@ -20,9 +20,7 @@ generator crud_generator {
 ```
 No campo provider, escreva "prisma-generator-nestjs-crud". Em output, coloque o caminho para a pasta src.
 
-O diretório src deve conter diretórios nomeados com o nome da sua model em kebab-case. Esses serão os locais onde os services serão gerados.
-
-Caso a pasta não exista ou o arquivo de service já existir, nenhum arquivo será gerado.
+Caso os arquivos já existam, eles não serão sobrescritos.
 
 Execute o comando
 ```
