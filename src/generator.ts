@@ -3,6 +3,7 @@ import { logger } from '@prisma/internals'
 import Case from 'case'
 import { GENERATOR_NAME } from './constants'
 import { genController } from './helpers/genController'
+import { genDto } from './helpers/genDto'
 import { genEntity } from './helpers/genEntity'
 import { genModule } from './helpers/genModule'
 import { genService } from './helpers/genService'
@@ -37,7 +38,15 @@ generatorHandler({
 
       const tsEntity = genEntity(model)
       const entityFileName = Case.kebab(model.name)+'.entity.ts'
-      await writeFile(writeDirLocation+'/entity', entityFileName, tsEntity)
+      await writeFile(writeDirLocation+'/entities', entityFileName, tsEntity)
+
+      const tsCreateDto = genDto(model, "Create")
+      const createDtoFileName = 'create-'+Case.kebab(model.name)+'.dto.ts'
+      await writeFile(writeDirLocation+'/dto', createDtoFileName, tsCreateDto)
+      
+      const tsUpdateDto = genDto(model, "Update")
+      const updateDtoFileName = 'update-'+Case.kebab(model.name)+'.dto.ts'
+      await writeFile(writeDirLocation+'/dto', updateDtoFileName, tsUpdateDto)
     })
   },
 })

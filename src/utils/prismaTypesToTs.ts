@@ -3,7 +3,7 @@ export function prismaTypesToTs(field: {name:string, type: string; isList: boole
   if (field.type == 'String') convertedType = 'string'
   else if (field.type == 'Int') convertedType = 'number'
   else if (field.type == 'Boolean') convertedType = 'boolean'
-  else throw Error(`${field.name} is not scalar`)
+  else if (field.type == 'DateTime') convertedType = 'Date'
 
-  return convertedType+field.isList?'[]':''
+  return convertedType as string + (field.isList?'[]':'');
 }

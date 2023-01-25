@@ -3,13 +3,13 @@ import Case from 'case'
 
 export function genController(model: DMMF.Model) {
   const nameKebab = Case.kebab(model.name)
-  const namePascal = Case.camel(model.name)
+  const namePascal = Case.pascal(model.name)
   const nameCamel = Case.camel(model.name)
-  const serviceFileName = nameKebab
-  const createDtoFileName = 'create-' + nameKebab + '.dto.ts'
-  const updateDtoFileName = 'update-' + nameKebab + '.dto.ts'
+  const serviceFileName = nameKebab + '.service'
+  const createDtoFileName = 'create-' + nameKebab + '.dto'
+  const updateDtoFileName = 'update-' + nameKebab + '.dto'
 
-  return
+  return (
 `import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { ${namePascal}Service } from './${serviceFileName}';
 import { Create${namePascal}Dto } from './dto/${createDtoFileName}';
@@ -45,5 +45,5 @@ export class ${namePascal}Controller {
   }
 }
 
-`
+`)
 }

@@ -7,10 +7,11 @@ export function genService(model: DMMF.Model): string {
   const nameLowercase = changeFirstLetter("lowercase", model.name)
   const namePascal = Case.pascal(model.name)
 
-  return `import { Injectable } from '@nestjs/common';
+  return (
+`import { Injectable } from '@nestjs/common';
 import { CrudOptions, RejectOptions } from '@cjr-unb/super-crud';
 import { Prisma } from '@prisma/client';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '../prisma/prisma.service';
 
 type ${nameUppercase}Model = Prisma.${nameUppercase}Delegate<RejectOptions>;
 const {defaultOptions, getCrud} = new CrudOptions<${nameUppercase}Model>().setOptions({});
@@ -23,5 +24,5 @@ export class ${namePascal}Service extends getCrud<
     super(prisma.${nameLowercase}, defaultOptions);
   }
 }    
-`
+`)
 }
