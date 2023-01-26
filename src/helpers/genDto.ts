@@ -11,7 +11,7 @@ import { ${namePascal}Entity } from "../entities/${nameKebab}.entity";
 
 export class ${type}${namePascal}Dto extends PickType(${namePascal}Entity, [${
   model.fields
-  .filter(field => field.kind == "scalar")
+  .filter(field => field.kind == 'scalar' && !field.hasDefaultValue)
   .map(
     (field) => `'${field.name}'`,
   )}]) {}        

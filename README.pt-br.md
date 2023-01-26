@@ -18,14 +18,12 @@ generator crud_generator {
   output   = "../src"
 }
 ```
-No campo provider, escreva "prisma-generator-nestjs-crud". Em output, coloque o caminho para a pasta src.
-
-Caso os arquivos já existam, eles não serão sobrescritos.
+No campo provider, escreva "prisma-generator-nestjs-crud". Em output, coloque o caminho do diretório onde você quer que os arquivos sejam gerados
 
 Execute o comando
 ```
 npx prisma generate
 ```
-E pronto!
+E pronto! Os arquivos começarão a ser gerados, mas se já existirem, não serão sobrescritos. Agora basta importar os módulos gerados em seu app.module
 
 Os services gerados utilizam a biblioteca @cjr-unb/super-crud para implementar o CRUD. Você pode encontrar mais informações [aqui](https://github.com/CJR-UnB/nestjs-prisma-super-crud/blob/main/README.pt-br.md)
